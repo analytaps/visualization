@@ -9,6 +9,10 @@ def hello_world():
     temp_list = ['a','b','c']
     return render_template('onepage.html', name=name, temp_list=temp_list)
 
+@app.route('/install')
+def install():
+	return render_template('install.html', step=5)
+
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
